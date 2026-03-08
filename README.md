@@ -21,7 +21,13 @@ Python-Projects/
 │ ├── data.py
 │ └── README.md
 │
-└── future_lessons...
+├── lesson03_employee_salary_analyzer
+│ ├── main.py
+│ ├── data.py
+│ ├── utilities.py
+│ └── README.md
+│
+
 ```
 
 
