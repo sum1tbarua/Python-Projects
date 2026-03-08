@@ -12,7 +12,11 @@ Each lesson introduces a concept and includes a small project that demonstrates 
 ```bash
 Python-Projects/
 │
-├── student_score_analyzer
+├── lesson01_log_analyzer
+│ ├── main.py
+│ ├── training_logs.txt
+│
+├── lesson02_student_score_analyzer
 │ ├── main.py
 │ ├── data.py
 │ └── README.md

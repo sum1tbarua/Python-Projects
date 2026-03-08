@@ -1,0 +1,9 @@
+INFO Training started
+INFO Loading dataset
+WARNING Missing 5 samples
+INFO Epoch 1 completed
+ERROR GPU memory overflow
+INFO Restarting training
+WARNING Learning rate too high
+INFO Epoch 2 completed
+ERROR Model diverged
