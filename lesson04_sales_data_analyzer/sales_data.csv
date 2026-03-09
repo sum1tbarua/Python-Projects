@@ -1,0 +1,9 @@
+name,region,product,amount
+Alice,North,Laptop,1200
+Bob,South,Phone,800
+Charlie,North,Tablet,600
+Alice,North,Phone,900
+David,West,Laptop,1500
+Eve,South,Tablet,700
+Bob,South,Laptop,1100
+Alice,North,Tablet,650
