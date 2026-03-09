@@ -27,6 +27,11 @@ Python-Projects/
 │ ├── utilities.py
 │ └── README.md
 │
+├── lesson04_sales_data_analyzer
+│ ├── main.py
+│ ├── sales_data.csv
+│ ├── utilities.py
+│ └── README.md
 
 ```
 
