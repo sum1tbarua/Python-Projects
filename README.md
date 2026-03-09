@@ -32,7 +32,13 @@ Python-Projects/
 │ ├── sales_data.csv
 │ ├── utilities.py
 │ └── README.md
-
+│
+├── lesson05_movie_ratings_analyzer
+│ ├── main.py
+│ ├── ratings_data.py
+│ ├── utilities.py
+│ └── README.md
+│
 ```
 
 
