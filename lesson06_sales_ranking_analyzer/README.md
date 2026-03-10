@@ -160,21 +160,6 @@ These skills are essential for:
 
 ---
 
-## Repository Progress
-
-This project is part of a structured Python learning path:
-
-| Lesson | Project | Concepts |
-|------|------|------|
-| 1 | Log Analyzer | loops, file reading |
-| 2 | Student Score Analyzer | lists, dictionaries, sets |
-| 3 | Employee Salary Analyzer | functions, modular code |
-| 4 | Sales Data Analyzer | CSV processing |
-| 5 | Movie Ratings Analyzer | Python comprehensions |
-| 6 | Sales Ranking Analyzer | sorting, lambda functions |
-
----
-
 ## Author
 
 **Sumit Barua**  
