@@ -12,7 +12,6 @@ if __name__ == '__main__':
     logging.info("Program started")
 
     sales = load_sales("sales_data.csv")
-    # print(sales)
 
     analyzer = SalesAnalyzer(sales)
 
