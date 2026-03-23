@@ -1,4 +1,4 @@
-from github_client import get_authenticated_user
+from github_client import get_authenticated_user, extract_rate_limit_info
 
 def main():
     print("Checking authentication...\n")
@@ -14,6 +14,13 @@ def main():
     else:
         print(f"⚠️ Unexpected response: {response.status_code}")
         print(response.text)
+    
+    rate_info = extract_rate_limit_info(response)
+    print("\nRate Limit Info:")
+    print(f"Limit: {rate_info['limit']}")
+    print(f"Remaining: {rate_info['remaining']}")
+    print(f"Reset: {rate_info['reset']}")
+    
 
 if __name__ == "__main__":
     main()
