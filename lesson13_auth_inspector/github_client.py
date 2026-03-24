@@ -2,6 +2,7 @@ import os
 import requests
 from datetime import datetime
 from config import *
+from exceptions import *
 
 def build_headers():
     headers = {
@@ -12,14 +13,26 @@ def build_headers():
     if GITHUB_TOKEN:
         print("Using token authentication")
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
-    else:
-        print("No token found.")
     return headers
 
 def get_authenticated_user():
     url = f"{BASE_URL}/user"
     response = requests.get(url, headers=build_headers())
-    return response
+    
+    if response.status_code == 200:
+        return response.json()
+    if response.status_code == 401:
+        raise GitHubAuthError("Authentication failed. Missing or invalid GitHub token.")
+    if response.status_code == 403:
+        rate_limit = extract_rate_limit_info(response)
+        if rate_limit['remaining'] == '0':
+            raise GitHubRateLimitError(
+                f"GitHub rate limit exceeded. Reset at {rate_limit['reset']}."
+            )
+        raise GitHubUnexpectedError("GitHub rejected the request with status 403.")
+    raise GitHubUnexpectedError(
+        f"Unexpected GitHub response: {response.status_code}"
+    )
 
 def extract_rate_limit_info(response):
     limit = response.headers.get("X-RateLimit-Limit")
